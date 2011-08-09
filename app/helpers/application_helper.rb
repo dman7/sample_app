@@ -1,5 +1,4 @@
 module ApplicationHelper
-
 	# Returns a generic title if no title is defined
 	def title
 		base_title = "Ruby on Rails Tutorial Sample App"
