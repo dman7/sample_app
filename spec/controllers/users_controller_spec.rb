@@ -68,13 +68,10 @@ describe UsersController do
 		end
   end
 
-
-
   describe "POST 'create'" do
     describe "failure" do
       before(:each) do
-        @attr = { :name => "", :email => "", :password => "",
-                  :password_confirmation => "" }
+        @attr = { :name => "", :email => "", :password => "",:password_confirmation => "" }
       end
 
       it "should not create a user" do
@@ -93,7 +90,6 @@ describe UsersController do
         response.should render_template('new')
       end
     end
-
 
     describe "success" do
       before(:each) do
@@ -116,7 +112,6 @@ describe UsersController do
         post(:create, {:user => @attr})
         flash[:success].should =~ /welcome to the sample app/i
       end
-
 
       it "should sign the user in" do
         post :create, :user => @attr
